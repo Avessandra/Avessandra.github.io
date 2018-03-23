@@ -1,8 +1,113 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style type="text/css">
+.sidebar{
+	width: 19%;
+	height: 600px;
+	background-color: black;
+	color: white;
+	text-align: right;
+	padding: 20px 10px;
+	display: inline-block;
+	margin: 0;
+	float: left;
+}
+
+.main{
+	width: 79%;
+	height: 600px;
+	background-color: white;
+	color: black;
+	padding: 6px 10px;
+	display: inline-block;
+	margin: 0;
+	float: left;
+}
+.animated-words {
+    display: inline-block;
+}
+.animated-words .word:nth-child(2) { 
+    -webkit-animation-delay: 2s; 
+    -ms-animation-delay: 2s; 
+    animation-delay: 2s; 
+    color: #6b889d;
+}
+.animated-words .word:nth-child(3) { 
+    -webkit-animation-delay: 4s; 
+    -ms-animation-delay: 4s; 
+    animation-delay: 4s; 
+    color: #6b739d; 
+}
+.animated-words .word:nth-child(4) { 
+    -webkit-animation-delay: 6s; 
+    -ms-animation-delay: 6s; 
+    animation-delay: 6s; 
+    color: #7a6b9d;
+}
+.animated-words .word:nth-child(5) { 
+    -webkit-animation-delay: 8s; 
+    -ms-animation-delay: 8s; 
+    animation-delay: 8s; 
+    color: #8d6b9d;
+}
+.animated-words .last:nth-child(6) { 
+    -webkit-animation-delay: 10s; 
+    -ms-animation-delay: 10s; 
+    animation-delay: 10s; 
+    color: #9b6b9d;
+}
+.animated-words .word {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #6b969d;
+    -webkit-animation: animateWord 10s linear 1 0s;
+    -ms-animation: animateWord 10s linear 1 0s;
+    animation: animateWord 10s linear 1 0s;
+}
+@-webkit-keyframes animateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.animated-words .last {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #6b969d;
+    -webkit-animation: animateWordLast 10s linear 1 0s;
+    -ms-animation: animateWordLast 10s linear 1 0s;
+    animation: animateWordLast 10s linear 1 0s;
+	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes animateWordLast {
+   	0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    100% { opacity: 1; }
+}
+</style>
+</head>
 <body>
-
-<h1>Hello World!</h1>
-
+<div class="sidebar">
+	<h1>Hello, I am</h1>
+</div>
+<div class="main">
+	<div class="animated-words">
+        <h1 class="word">joyful</h1>
+        <h1 class="word">enthusiastic</h1>
+        <h1 class="word">ambitious</h1>
+        <h1 class="word">reliable</h1>
+        <h1 class="word">curious</h1>
+        <h1 class="last">Kamila.</h1>
+    </div> 
+</div>
 </body>
 </html>
